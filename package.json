@@ -1,12 +1,12 @@
 {
-  "name": "fp",
+  "name": "javascript-fp",
   "version": "1.0.0",
   "main": "index.js",
   "repository": "https://github.com/gloriaJun/javascript-fp.git",
-  "author": "gloriaJun <pureainu@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node_modules/.bin/babel-node index.js"
+    "start": "node_modules/.bin/babel-node index.js",
+    "lint": "eslint ."
   },
   "dependencies": {
     "babel-cli": "^6.26.0",
@@ -16,5 +16,12 @@
     "presets": [
       "env"
     ]
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "mocha": "^5.2.0"
   }
 }
