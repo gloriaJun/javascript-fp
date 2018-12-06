@@ -25,4 +25,3 @@ function map(list, predicate) {
 }
 
 export default map;
-
