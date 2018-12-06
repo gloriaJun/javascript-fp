@@ -1,20 +1,16 @@
 {
   "name": "javascript-fp",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "src/index.js",
   "repository": "https://github.com/gloriaJun/javascript-fp.git",
   "license": "MIT",
   "scripts": {
     "start": "node_modules/.bin/babel-node index.js",
     "lint": "eslint .",
-    "build": "babel index.js -d lib"
+    "build": "babel index.js -d lib",
+    "build2": "webpack --config webpack.config.js"
   },
   "dependencies": {},
-  "babel": {
-    "presets": [
-      "env"
-    ]
-  },
   "devDependencies": {
     "babel": "^6.23.0",
     "babel-cli": "^6.26.0",
@@ -23,6 +19,8 @@
     "eslint": "^5.9.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.14.0",
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2"
   }
 }
