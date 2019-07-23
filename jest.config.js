@@ -5,11 +5,11 @@ module.exports = {
     '<rootDir>/**/*.(spec|test).[jt]s?(x)',
     '<rootDir>/tests/**/*.(spec|test).[jt]s?(x)',
   ],
-  setupFiles: ['<rootDir>/tests/unit/testSetup.js'],
+  // setupFiles: ['<rootDir>/tests/unit/testSetup.js'],
   // setupFilesAfterEnv: ['react-testing-library/cleanup-after-each'],
   moduleDirectories: ['node_modules', 'src'],
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
   },
-  moduleFileExtensions: ['js', 'jsx', 'json'],
+  moduleFileExtensions: ['js', 'json'],
 };
