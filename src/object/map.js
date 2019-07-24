@@ -1,8 +1,10 @@
 import isArray from 'array/isArray';
+import each from 'each';
+
 /**
  *
  * @category Object
- * @param {Object, Array} list
+ * @param {Object|Array} list
  * @param {Function} predicate
  */
 function map(list, predicate) {
@@ -10,19 +12,12 @@ function map(list, predicate) {
 
   if (isArray(list)) {
     result = [];
-    const len = list.length;
-
-    for (let i = 0; i < len; i += 1) {
-      result[i] = predicate(list[i], i, list);
-    }
+    each(list, (item, i) => result.push(predicate(item, i, list)));
   } else {
     result = {};
-    const keys = Object.keys(list);
-    const len = keys.length;
-
-    for (let i = 0; i < len; i += 1) {
-      result[i] = predicate(list[keys[i]], keys[i], list);
-    }
+    each(list, (item, key) => {
+      result[key] = predicate(item, key, list);
+    });
   }
 
   return result;

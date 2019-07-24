@@ -1,8 +1,9 @@
 import isArray from 'array/isArray';
+import each from 'each';
 
 /**
  * @category Object
- * @param {Object, Array} list
+ * @param {Object|Array} list
  * @param {Function} predicate
  * @returns {Array} Returns list
  * @example
@@ -12,25 +13,18 @@ function filter(list, predicate) {
 
   if (isArray(list)) {
     result = [];
-    const len = list.length;
-
-    for (let i = 0; i < len; i += 1) {
-      if (predicate(list[i])) {
-        result.push(list[i]);
+    each(list, (item, i) => {
+      if (predicate(item, i, list)) {
+        result.push(item);
       }
-    }
+    });
   } else {
     result = {};
-    const keys = Object.keys(list);
-    const len = keys.length;
-
-    for (let i = 0; i < len; i += 1) {
-      const key = keys[i];
-
-      if (predicate(list[key])) {
+    each(list, (item, key) => {
+      if (predicate(item, key, list)) {
         result[key] = list[key];
       }
-    }
+    });
   }
 
   return result;
