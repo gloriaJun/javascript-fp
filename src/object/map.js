@@ -1,6 +1,7 @@
 /**
  *
- * @param {List, Array} list
+ * @category Object
+ * @param {Object, Array} list
  * @param {Function} predicate
  */
 function map(list, predicate) {
