@@ -17,5 +17,11 @@ module.exports = {
     'no-console': process.env.NODE_ENV === 'production' ? 2 : 0,
     camelcase: 'error',
   },
-  settings: {},
+  settings: {
+    'import/resolver': {
+      node: {
+        moduleDirectory: ['node_modules', 'src/'],
+      },
+    },
+  },
 };

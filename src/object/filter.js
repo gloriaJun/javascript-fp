@@ -1,11 +1,13 @@
 import isArray from 'array/isArray';
+
 /**
- *
  * @category Object
  * @param {Object, Array} list
  * @param {Function} predicate
+ * @returns {Array} Returns list
+ * @example
  */
-function map(list, predicate) {
+function filter(list, predicate) {
   let result;
 
   if (isArray(list)) {
@@ -13,7 +15,9 @@ function map(list, predicate) {
     const len = list.length;
 
     for (let i = 0; i < len; i += 1) {
-      result[i] = predicate(list[i], i, list);
+      if (predicate(list[i])) {
+        result.push(list[i]);
+      }
     }
   } else {
     result = {};
@@ -21,11 +25,15 @@ function map(list, predicate) {
     const len = keys.length;
 
     for (let i = 0; i < len; i += 1) {
-      result[i] = predicate(list[keys[i]], keys[i], list);
+      const key = keys[i];
+
+      if (predicate(list[key])) {
+        result[key] = list[key];
+      }
     }
   }
 
   return result;
 }
 
-export default map;
+export default filter;
