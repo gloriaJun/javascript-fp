@@ -1,4 +1,4 @@
-import isArray from 'array/isArray';
+import { isArray } from 'array';
 import each from 'each';
 
 /**

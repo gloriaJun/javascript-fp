@@ -3,20 +3,20 @@
  * @return {function(*=): function(*=): *}
  */
 function curry(f) {
-  return function(a, b) {
+  return function inner(a, b) {
     return arguments.length === 2
       ? f(a, b)
-      : function(v) {
+      : function inner2(v) {
           return f(a, v);
         };
   };
 }
 
 function curryr(f) {
-  return function(a, b) {
+  return function inner(a, b) {
     return arguments.length === 2
       ? f(a, b)
-      : function(v) {
+      : function inner2(v) {
           return f(v, a);
         };
   };
