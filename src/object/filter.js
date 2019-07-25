@@ -22,7 +22,7 @@ function filter(list, predicate) {
     result = {};
     each(list, (item, key) => {
       if (predicate(item, key, list)) {
-        result[key] = list[key];
+        result[key] = item;
       }
     });
   }

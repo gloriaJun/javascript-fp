@@ -8,17 +8,11 @@ import each from 'each';
  * @param {Function} predicate
  */
 function map(list, predicate) {
-  let result;
+  const result = isArray(list) ? [] : {};
 
-  if (isArray(list)) {
-    result = [];
-    each(list, (item, i) => result.push(predicate(item, i, list)));
-  } else {
-    result = {};
-    each(list, (item, key) => {
-      result[key] = predicate(item, key, list);
-    });
-  }
+  each(list, (item, key) => {
+    result[key] = predicate(item, key, list);
+  });
 
   return result;
 }
