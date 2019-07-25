@@ -16,6 +16,7 @@ module.exports = {
     // ESLint
     'no-console': process.env.NODE_ENV === 'production' ? 2 : 0,
     camelcase: 'error',
+    'no-param-reassign': ['error', { props: false }],
   },
   settings: {
     'import/resolver': {
