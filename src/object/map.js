@@ -1,5 +1,6 @@
 import { isArray } from 'array';
 import each from 'each';
+import { curryr } from 'curry';
 
 /**
  *
@@ -17,4 +18,4 @@ function map(list, predicate) {
   return result;
 }
 
-export default map;
+export default curryr(map);

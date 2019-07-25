@@ -1,4 +1,5 @@
 import isArray from 'array/isArray';
+import { curryr } from 'curry';
 
 /**
  * @param {Object|Array} list
@@ -22,4 +23,4 @@ function each(list, iteratee) {
   }
 }
 
-export default each;
+export default curryr(each);
