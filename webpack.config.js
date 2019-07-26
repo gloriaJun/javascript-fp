@@ -1,16 +1,30 @@
+const webpack = require('webpack');
 const path = require('path');
+const pkg = require('./package.json');
 
 const resolve = (...args) => path.resolve(__dirname, ...args);
 
+const libraryName = pkg.name;
+const banner = `${pkg.name}
+@version v${pkg.version}
+@author ${pkg.author}
+@repository ${pkg.repository.url}`;
+
 module.exports = (env, options) => {
+  const { mode } = options;
+
   const config = {
-    mode: options.mode,
+    mode,
     entry: {
-      index: resolve('src', 'index.js'),
+      index: resolve('index.js'),
     },
+    devtool: 'inline-source-map',
     output: {
       path: resolve('dist'),
-      filename: '[name].bundle.js',
+      filename: `${libraryName}.${mode === 'development' ? '' : 'min.'}js`,
+      library: libraryName,
+      libraryTarget: 'umd',
+      umdNamedDefine: true,
     },
     resolve: {
       modules: ['node_modules', resolve('src')],
@@ -36,7 +50,7 @@ module.exports = (env, options) => {
         },
       ],
     },
-    plugins: [],
+    plugins: [new webpack.BannerPlugin(banner)],
   };
 
   return config;
