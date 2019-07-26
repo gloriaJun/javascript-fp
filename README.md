@@ -1,3 +1,11 @@
+# javascript utilidad
+
+[![npm version](https://badge.fury.io/js/js-utilidad.svg)](https://badge.fury.io/js/js-utilidad)
+[![Build Status](https://travis-ci.com/gloriaJun/gloriaJun/js-utils-fp.svg?branch=master)](https://travis-ci.com/gloriaJun/gloriaJun/js-utils-fp)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/a05ccfd565e941108112fd1b57f249da)](https://www.codacy.com/app/pureainu/js-utils-fp?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=gloriaJun/js-utils-fp&amp;utm_campaign=Badge_Grade)
+[![DeepScan grade](https://deepscan.io/api/teams/4378/projects/6600/branches/55720/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=4378&pid=6600&bid=55720)
+[![devDependencies Status](https://david-dm.org/gloriaJun/js-utils-fp/dev-status.svg)](https://david-dm.org/gloriaJun/js-utils-fp?type=dev)
+
 ## Functional Programming
 - javascript 함수형 프로그래밍을 이용하여 utility 만들어보기
 
