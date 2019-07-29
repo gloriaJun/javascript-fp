@@ -22,6 +22,9 @@ module.exports = {
     'no-console': process.env.NODE_ENV === 'production' ? 2 : 0,
     camelcase: 'error',
     'no-param-reassign': ['error', { props: false }],
+
+    // TypeScript
+    '@typescript-eslint/no-explicit-any': 0,
   },
   settings: {
     'import/extensions': ['.js', '.jsx', '.ts', '.tsx'],

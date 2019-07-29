@@ -1,4 +1,4 @@
-import curry, { curryr } from 'curry';
+import curry, { curryr } from './curry';
 
 describe('curry', () => {
   it('should be return 15 - add', () => {

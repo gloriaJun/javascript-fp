@@ -8,7 +8,7 @@
  * camelCase('__FOO_BAR__')
  * // => 'fooBar'
  */
-export default str => {
+export default (str: string): string => {
   return str
     .toLowerCase()
     .replace(/[-_]/g, ' ')

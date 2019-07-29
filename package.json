@@ -26,7 +26,7 @@
     "test:watch": "$npm_execpath test --watch",
     "test:coverage": "$npm_execpath test --coverage --colors",
     "lint": "tsc --noEmit && eslint 'src/**/*.{js,jsx,ts,tsx}' --fix",
-    "format": "prettier --write 'src/**/*.{js,jsx,css,scss}'"
+    "format": "prettier --write 'src/**/*.{ts,tsx,js,jsx,css,scss}'"
   },
   "lint-staged": {
     "**/*.js": [

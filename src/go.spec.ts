@@ -1,4 +1,4 @@
-import go from 'go';
+import go from './go';
 
 describe('go', () => {
   it('should be return 4', () => {

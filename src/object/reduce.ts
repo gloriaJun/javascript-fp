@@ -1,5 +1,5 @@
-import { isArray } from 'array';
-import each from 'each';
+import { isArray } from '../array';
+import each from '../each';
 
 /**
  *
@@ -8,7 +8,11 @@ import each from 'each';
  * @param {Function} iteratee
  * @param {*} accumulator
  */
-function reduce(list, iteratee, accumulator = undefined) {
+function reduce(
+  list: object | any[],
+  iteratee: Function,
+  accumulator: any = undefined,
+): object | any[] {
   let hasAccum = arguments.length >= 3;
   let initAccum = accumulator;
 
