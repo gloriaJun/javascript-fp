@@ -1,6 +1,11 @@
 module.exports = {
-  parser: 'babel-eslint',
-  extends: ['airbnb-base', 'plugin:prettier/recommended'],
+  parser: '@typescript-eslint/parser',
+  extends: [
+    'airbnb-base',
+    'plugin:@typescript-eslint/recommended',
+    'prettier/@typescript-eslint',
+    'plugin:prettier/recommended',
+  ],
   env: {
     browser: true,
     node: true,
@@ -8,7 +13,7 @@ module.exports = {
     jest: true,
   },
   parserOptions: {
-    ecmaVersion: 6,
+    ecmaVersion: 2018,
     sourceType: 'module',
     ecmaFeatures: {},
   },
@@ -19,8 +24,13 @@ module.exports = {
     'no-param-reassign': ['error', { props: false }],
   },
   settings: {
+    'import/extensions': ['.js', '.jsx', '.ts', '.tsx'],
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx'],
+    },
     'import/resolver': {
       node: {
+        extensions: ['.js', '.jsx', '.ts', '.tsx'],
         moduleDirectory: ['node_modules', 'src'],
       },
     },
