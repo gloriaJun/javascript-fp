@@ -21,6 +21,6 @@ const each = (list: any, iteratee: Function): any => {
       iteratee(list[key], key, i);
     }
   }
-}
+};
 
 export default curryRight(each);

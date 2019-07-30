@@ -17,7 +17,7 @@ function reduce(
   let initAccum = accumulator;
 
   if (isArray(list)) {
-    each(list, (item, i) => {
+    each(list, (item, i): void => {
       initAccum = hasAccum
         ? iteratee(initAccum, item, i, list)
         : ((hasAccum = true), item);
@@ -27,7 +27,7 @@ function reduce(
       initAccum = {};
     }
 
-    each(list, (item, key) => {
+    each(list, (item, key): void => {
       initAccum = iteratee(initAccum, item, key, list);
     });
   }

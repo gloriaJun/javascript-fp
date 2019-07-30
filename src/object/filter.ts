@@ -14,14 +14,14 @@ function filter(list: object | any[], predicate: Function): object | any[] {
 
   if (isArray(list)) {
     result = [];
-    each(list, (item, i) => {
+    each(list, (item, i): void => {
       if (predicate(item, i, list)) {
         result.push(item);
       }
     });
   } else {
     result = {};
-    each(list, (item, key) => {
+    each(list, (item, key): void => {
       if (predicate(item, key, list)) {
         result[key] = item;
       }

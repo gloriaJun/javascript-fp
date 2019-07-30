@@ -11,7 +11,7 @@ import { curryRight } from '../curry';
 function map(list: object | any[], predicate: Function): object | any[] {
   const result = isArray(list) ? [] : {};
 
-  each(list, (item, key) => {
+  each(list, (item, key): void => {
     result[key] = predicate(item, key, list);
   });
 

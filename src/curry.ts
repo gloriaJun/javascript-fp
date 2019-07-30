@@ -10,7 +10,7 @@ const curry = (f: Function): Function => {
           return f(a, v);
         };
   };
-}
+};
 
 const curryRight = (f: Function): Function => {
   return function inner(a: any, b: any): Function {
@@ -20,7 +20,7 @@ const curryRight = (f: Function): Function => {
           return f(v, a);
         };
   };
-}
+};
 
 export default curry;
 export { curryRight };

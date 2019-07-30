@@ -13,6 +13,6 @@ export default (str: string): string => {
     .toLowerCase()
     .replace(/[-_]/g, ' ')
     .trim()
-    .replace(/\s(.)/g, $1 => $1.toUpperCase())
+    .replace(/\s(.)/g, ($1): string => $1.toUpperCase())
     .replace(/\s+/g, '');
 };

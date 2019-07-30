@@ -2,7 +2,7 @@ import curry, { curryRight } from './curry';
 
 describe('curry', () => {
   it('should be return 15 - add', () => {
-    const add = curry((a, b) => a + b);
+    const add = curry((a, b): number => a + b);
     const add10 = add(10);
 
     expect(add10(5)).toBe(15);
