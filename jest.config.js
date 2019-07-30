@@ -1,4 +1,8 @@
 module.exports = {
+  transform: {
+    '^.+\\.tsx?$': 'ts-jest',
+  },
+  // testRegex: '\\.test\\.ts$',
   // Automatically clear mock calls and instances between every test
   clearMocks: true,
   testMatch: [
@@ -11,5 +15,11 @@ module.exports = {
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/src/$1',
   },
-  moduleFileExtensions: ['js', 'json'],
+  moduleFileExtensions: ['ts', 'js', 'json'],
+  globals: {
+    'ts-jest': {
+      // failed when occurred compile error (default: false)
+      enableTsDiagnostics: true,
+    },
+  },
 };

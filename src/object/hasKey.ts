@@ -12,8 +12,6 @@
  * has(object, 'a')
  * // => true
  */
-function hasKey(object, key) {
+export default (object: object, key: string): boolean => {
   return object != null && Object.prototype.hasOwnProperty.call(object, key);
-}
-
-export default hasKey;
+};

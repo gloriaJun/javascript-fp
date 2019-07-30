@@ -5,8 +5,5 @@ import hasKey from './hasKey';
  * @param {Object} object The object to query.
  * @param {string} key The key to check.
  */
-function get(object, key) {
-  return hasKey(object, key) ? object[key] : undefined;
-}
-
-export default get;
+export default (object: object, key: string): any =>
+  hasKey(object, key) ? object[key] : undefined;

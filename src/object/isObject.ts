@@ -3,7 +3,7 @@
  * @param {*} obj
  * @return {boolean}
  */
-export default function isObject(obj) {
+export default (obj: any): boolean => {
   const type = typeof obj;
   return obj != null && (type === 'object' || type === 'function');
-}
+};

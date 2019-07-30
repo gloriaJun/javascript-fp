@@ -1,6 +1,6 @@
-import { isArray } from 'array';
-import each from 'each';
-import { curryr } from 'curry';
+import { isArray } from '../array';
+import each from '../each';
+import { curryRight } from '../curry';
 
 /**
  *
@@ -8,7 +8,7 @@ import { curryr } from 'curry';
  * @param {Object|Array} list
  * @param {Function} predicate
  */
-function map(list, predicate) {
+function map(list: object | any[], predicate: Function): object | any[] {
   const result = isArray(list) ? [] : {};
 
   each(list, (item, key) => {
@@ -18,4 +18,4 @@ function map(list, predicate) {
   return result;
 }
 
-export default curryr(map);
+export default curryRight(map);

@@ -1,4 +1,4 @@
-import filter from 'object/filter';
+import filter from './filter';
 
 describe('filter', () => {
   it('should be return age over 30 - given array type', () => {
