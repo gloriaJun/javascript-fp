@@ -1,12 +1,11 @@
 {
-  "name": "js-utilidad",
-  "version": "1.0.0",
+  "name": "@gloriajun/js-utilidad",
+  "version": "1.0.1",
   "author": "Gloria Jun<pureainu@gmail.com>",
   "repository": "https://github.com/gloriaJun/js-utils-fp.git",
   "license": "MIT",
-  "main": "dist/js-utilidad.umd.js",
-  "module": "dist/js-utilidad.es5.js",
-  "typings": "dist/types/js-utilidad.d.ts",
+  "main": "dist/js-utilidad.js",
+  "unpkg": "dist/js-utilidad.min.js",
   "files": [
     "dist"
   ],
