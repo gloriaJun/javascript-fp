@@ -2,7 +2,7 @@ export * from './string';
 export * from './object';
 export * from './array';
 
-export { default as curry, curryr } from './curry';
+export { default as curry, curryRight } from './curry';
 export { default as each } from './each';
 export { default as go } from './go';
 export { default as identity } from './identity';

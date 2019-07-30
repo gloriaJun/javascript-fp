@@ -1,6 +1,6 @@
 import { isArray } from '../array';
 import each from '../each';
-import { curryr } from '../curry';
+import { curryRight } from '../curry';
 
 /**
  * @category Object
@@ -31,4 +31,4 @@ function filter(list: object | any[], predicate: Function): object | any[] {
   return result;
 }
 
-export default curryr(filter);
+export default curryRight(filter);

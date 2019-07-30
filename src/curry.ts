@@ -2,7 +2,7 @@
  * @param {function|*} f
  * @return {function(*=): function(*=): *}
  */
-function curry(f: Function): Function {
+const curry = (f: Function): Function => {
   return function inner(a: any, b: any): Function {
     return arguments.length === 2
       ? f(a, b)
@@ -12,7 +12,7 @@ function curry(f: Function): Function {
   };
 }
 
-function curryr(f: Function): Function {
+const curryRight = (f: Function): Function => {
   return function inner(a: any, b: any): Function {
     return arguments.length === 2
       ? f(a, b)
@@ -23,4 +23,4 @@ function curryr(f: Function): Function {
 }
 
 export default curry;
-export { curryr };
+export { curryRight };
