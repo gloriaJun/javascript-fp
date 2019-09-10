@@ -6,6 +6,11 @@
 [![DeepScan grade](https://deepscan.io/api/teams/4378/projects/6600/branches/55720/badge/grade.svg)](https://deepscan.io/dashboard#view=project&tid=4378&pid=6600&bid=55720)
 [![devDependencies Status](https://david-dm.org/gloriaJun/js-utils-fp/dev-status.svg)](https://david-dm.org/gloriaJun/js-utils-fp?type=dev)
 
+- [Functional Programming](#functional-programming)
+  - [해당 프로젝트의 목표는](#해당-프로젝트의-목표는)
+  - [나와의 약속](#나와의-약속)
+- [실습하면서 작성했던 기록들...](#실습하면서-작성했던-기록들)
+
 ## Functional Programming
 - javascript 함수형 프로그래밍을 이용하여 utility 만들어보기
 

@@ -1,11 +1,11 @@
-import isArray from 'array/isArray';
-import { curryr } from 'curry';
+import isArray from './array/isArray';
+import { curryRight } from './curry';
 
 /**
  * @param {Object|Array} list
  * @param {Function} iteratee
  */
-function each(list, iteratee) {
+const each = (list: any, iteratee: Function): any => {
   if (isArray(list)) {
     const len = list.length;
 
@@ -21,6 +21,6 @@ function each(list, iteratee) {
       iteratee(list[key], key, i);
     }
   }
-}
+};
 
-export default curryr(each);
+export default curryRight(each);

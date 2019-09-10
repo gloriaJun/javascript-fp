@@ -1,8 +1,8 @@
-import curry, { curryr } from 'curry';
+import curry, { curryRight } from './curry';
 
 describe('curry', () => {
   it('should be return 15 - add', () => {
-    const add = curry((a, b) => a + b);
+    const add = curry((a, b): number => a + b);
     const add10 = add(10);
 
     expect(add10(5)).toBe(15);
@@ -11,7 +11,7 @@ describe('curry', () => {
   });
 
   it('should be return 5 - sub', () => {
-    const sub = curryr((a, b) => a - b);
+    const sub = curryRight((a, b) => a - b);
     const sub5 = sub(5);
 
     expect(sub5(10)).toBe(5);

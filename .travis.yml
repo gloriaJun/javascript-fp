@@ -10,6 +10,7 @@ cache:
 branches:
   only:
     - master
+    - develop
 
 install:
   - npm install
@@ -20,10 +21,11 @@ jobs:
       script:
         - npm build
     - stage: publish
+      if: branch = master
       before_script:
         - npm config set //registry.npmjs.org/:_authToken=$NPM_TOKEN
       script:
-        - npm publish
+        - npm publish --access=public
 
 notifications:
   email: false

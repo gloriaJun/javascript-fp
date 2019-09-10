@@ -8,11 +8,11 @@
  * camelCase('__FOO_BAR__')
  * // => 'fooBar'
  */
-export default str => {
+export default (str: string): string => {
   return str
     .toLowerCase()
     .replace(/[-_]/g, ' ')
     .trim()
-    .replace(/\s(.)/g, $1 => $1.toUpperCase())
+    .replace(/\s(.)/g, ($1): string => $1.toUpperCase())
     .replace(/\s+/g, '');
 };

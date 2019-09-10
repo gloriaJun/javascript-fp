@@ -1,1 +1,3 @@
-webpack.config.js
+*.config.js
+*.spec.js
+*.spec.ts

@@ -13,10 +13,10 @@ const banner = `${pkg.name}
 module.exports = (env, options) => {
   const { mode } = options;
 
-  const config = {
+  return {
     mode,
     entry: {
-      index: resolve('index.js'),
+      index: './src/index.ts',
     },
     devtool: 'inline-source-map',
     output: {
@@ -28,30 +28,23 @@ module.exports = (env, options) => {
     },
     resolve: {
       modules: ['node_modules', resolve('src')],
-      extensions: ['.js', '.json'],
+      extensions: ['.ts', '.js', '.json'],
     },
     module: {
       rules: [
         {
           enforce: 'pre',
-          test: /\.js$/,
-          exclude: /(node_modules)/,
+          test: /\.[jt]s$/,
           loader: 'eslint-loader',
+          exclude: /node_modules/,
         },
         {
-          test: /\.js$/,
-          exclude: /(node_modules)/,
-          use: {
-            loader: 'babel-loader',
-            options: {
-              presets: ['@babel/preset-env'],
-            },
-          },
+          test: /\.ts$/,
+          use: ['babel-loader', 'ts-loader'],
+          exclude: /node_modules/,
         },
       ],
     },
     plugins: [new webpack.BannerPlugin(banner)],
   };
-
-  return config;
 };

@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "sourceMap": true,
+    // Raise error on expressions and declarations with an implied any type.
+//    "noImplicitAny": true,
+    "module": "es6",
+    "target": "es5",
+    "moduleResolution": "node",
+    "jsx": "react",
+    "allowJs": true
+  },
+  "include": [
+      "./src/**/*"
+    ],
+  "exclude": [
+    "node_modules"
+  ]
+}

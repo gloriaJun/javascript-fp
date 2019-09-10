@@ -3,10 +3,8 @@
  * @param {*} obj
  * @return {boolean}
  */
-function isArray(obj) {
+export default (obj: unknown): boolean => {
   return !Array.isArray
     ? Object.prototype.toString.call(obj) === '[object Array]'
     : Array.isArray(obj);
-}
-
-export default isArray;
+};
